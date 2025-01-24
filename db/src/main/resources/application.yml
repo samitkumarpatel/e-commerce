@@ -3,3 +3,16 @@ spring:
     name: db
   flyway:
     enabled: false
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+  datasource:
+    url: jdbc:postgresql://localhost:5432/e-commerce
+    username: postgres
+    password: root
+  data:
+    rest:
+      base-path: /db
+      default-media-type: application/json
+      return-body-on-create: true
+      return-body-on-update: true
