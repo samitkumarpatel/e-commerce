@@ -1,0 +1,50 @@
+GET http://localhost:8080/db/users
+
+###
+GET http://localhost:8080/db/users/1
+
+###
+POST http://localhost:8080/db/users
+Content-Type: application/json
+
+{
+  "name": "test1",
+  "email": "test1@no-reply.net",
+  "passwordHash": "abc123"
+}
+
+###
+POST http://localhost:8080/db/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "test2",
+  "email": "test2@no-reply.net",
+  "passwordHash": "123abc",
+  "addresses": [
+    {
+      "address": "ABC Street, NZ"
+    }
+  ]
+}
+
+###
+PUT http://localhost:8080/db/users/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "testOne",
+  "email": "test1@no-reply.net",
+  "passwordHash": "abc123"
+}
+
+###
+PATCH http://localhost:8080/db/users/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "testOne@no-reply.net"
+}

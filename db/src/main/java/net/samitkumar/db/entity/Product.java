@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.ReadOnlyProperty;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDateTime;
@@ -20,5 +21,7 @@ public class Product {
     @ReadOnlyProperty
     private LocalDateTime createdAt;
     private Long category;
+    @MappedCollection(idColumn = "product")
+    private Inventory inventory;
 
 }

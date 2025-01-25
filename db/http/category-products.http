@@ -1,0 +1,77 @@
+GET http://localhost:8080/db/categories
+
+###
+GET http://localhost:8080/db/categories/1
+
+###
+POST http://localhost:8080/db/categories
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Beverages",
+  "description": "Drinks , Milk and Other Drinks"
+}
+
+###
+PUT http://localhost:8080/db/categories/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Beverages",
+  "description": "All types of Drinks"
+}
+
+###
+PATCH http://localhost:8080/db/categories/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "description": "Healthy Drinks, Milk, Soda, Water and etc"
+}
+
+###
+GET http://localhost:8080/db/products
+
+###
+GET http://localhost:8080/db/products/2
+
+###
+POST http://localhost:8080/db/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "category": 1,
+  "name": "Fat milk",
+  "price": 12,
+  "description": "4.5% fat milk"
+}
+
+###
+PUT http://localhost:8080/db/products/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "category": 1,
+  "name": "Fat Milk",
+  "price": 13,
+  "description": "4.5% fat milk",
+  "inventory": {
+    "quantity": 30
+  }
+}
+
+###
+PATCH http://localhost:8080/db/products/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "inventory": {
+    "quantity": 29
+  }
+}
