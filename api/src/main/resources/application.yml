@@ -1,0 +1,11 @@
+
+spring:
+  application:
+    name: api
+    db:
+      uri: http://localhost:8080
+  webflux:
+    problemdetails:
+      enabled: true
+server:
+  port: 8081
